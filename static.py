@@ -1,6 +1,7 @@
 class Atm:
     #static variable
     counter = 1
+
     def __init__(self):
         self.pin = ""
         self.balance = 0
@@ -51,6 +52,8 @@ class Atm:
             self.know_account_balance()
         else:
             pass
+
+        
 SBI = Atm()
 print(SBI.sno)
 hdfc = Atm()
