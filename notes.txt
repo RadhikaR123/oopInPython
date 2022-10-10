@@ -1,0 +1,34 @@
+A. We use "assert" keyword to set the condition for any attribute inside __init__..Example = 
+def __init__(self, name: str, price: float, quantity=0):
+    # Run validations to the received arguments
+    assert price >= 0, f"Price {price} is not greater than or equal to zero!"
+    assert quantity >= 0, f"Quantity {quantity} is not greater or equal to zero!"
+
+B. class attribute:- These are the attributes which we define inside class but outside the methods, and they can fethced or used by 
+                    each methods inside class 
+                    as - className.attributeName
+
+
+
+C. static vs class method :- 
+When to use class methods and when to use static methods ?
+
+@staticmethod
+def is_integer():
+    '''
+    This should do something that has a relationship
+    with the class, but not something that must be unique
+    per instance!
+    '''
+@classmethod
+def instantiate_from_something(cls):
+    '''
+    This should also do something that has a relationship
+    with the class, but usually, those are used to
+    manipulate different structures of data to instantiate
+    objects, like we have done with CSV.
+    '''
+
+THE ONLY DIFFERENCE BETWEEN THOSE:
+Static methods are not passing the object reference as the first argument in the background!
+NOTE: However, those could be also called from instances.
